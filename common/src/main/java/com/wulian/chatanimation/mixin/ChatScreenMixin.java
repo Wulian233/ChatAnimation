@@ -1,4 +1,4 @@
-package com.wulian.chatanimation.fabric.mixin;
+package com.wulian.chatanimation.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;

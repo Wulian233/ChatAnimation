@@ -6,6 +6,6 @@ import net.fabricmc.api.ClientModInitializer;
 public class ChatAnimationClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        ChatAnimation.init();
+		ChatAnimation.LOGGER.info("Chat Animation is loaded!");
     }
 }

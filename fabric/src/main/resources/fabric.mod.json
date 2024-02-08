@@ -19,7 +19,8 @@
     ]
 	},
 	"mixins": [
-		"chatanimation.mixins.json"
+		"chatanimation.mixins.json",
+		"chatanimation.fabric.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.2",

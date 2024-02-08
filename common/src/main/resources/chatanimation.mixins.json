@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.wulian.chatanimation.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+	],
+	"client": [
+		"ChatScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

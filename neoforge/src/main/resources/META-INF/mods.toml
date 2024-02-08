@@ -14,6 +14,12 @@ Makes chat messages appear with a smooth animation.
 '''
 #logoFile = "icon.png"
 
+[[mixins]]
+config = "chatanimation.mixins.json"
+
+[[mixins]]
+config = "chatanimation.neoforge.mixins.json"
+
 [[dependencies.chatanimation]]
 modId = "minecraft"
 type = "required"
