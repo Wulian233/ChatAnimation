@@ -14,22 +14,7 @@ Makes chat messages appear with a smooth animation.
 <img alt="architectury-api" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/requires/architectury-api_vector.svg">
 </div>
 
-## 📖 What's this mod? 问题
-我的问题：
-
-FabricLoader不会移植到Forge Neoforge
-
-
-未知代码问题：
-
-Fabric正常启动，功能正常，mixin正常
-
-Forge无法启动mc，并且理论上功能无效果，mixin不正常（因为注释掉了FabricLoader部分）
-
-Neoforge正常启动，功能无效果，mixin不正常（因为注释掉了FabricLoader部分）
-
-Forge: Caused by: java.lang.module.ResolutionException: Modules generated_0e72c13 and ChatAnimation.mc1._20._4.dev export package com.wulian.chatanimation to module chatanimation
-
+## 📖 What's this mod? 
 
 ## ✅ Features:
 

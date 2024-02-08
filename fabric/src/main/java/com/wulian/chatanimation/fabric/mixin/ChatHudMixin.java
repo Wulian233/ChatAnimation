@@ -1,7 +1,9 @@
 package com.wulian.chatanimation.fabric.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import net.fabricmc.loader.api.FabricLoader;
+import com.wulian.chatanimation.ChatAnimationExpectPlatform;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.ChatHud;
 import net.minecraft.client.gui.hud.ChatHudLine;
@@ -22,7 +24,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Environment(EnvType.CLIENT)
 @Mixin(ChatHud.class)
 public class ChatHudMixin {
 	@Shadow private int scrolledLines;
@@ -56,8 +58,8 @@ public class ChatHudMixin {
 	@Unique private int chatDisplacementY = 0;
 
 	@Inject(method = "render", at = @At(
-			value = "INVOKE",
-			target = "Lnet/minecraft/client/gui/hud/ChatHudLine$Visible;addedTime()I"
+		value = "INVOKE",
+		target = "Lnet/minecraft/client/gui/hud/ChatHudLine$Visible;addedTime()I"
 	))
 	public void getChatLineIndex(CallbackInfo ci, @Local(ordinal = 13) int chatLineIndex) {
 		// Capture which chat line is currently being rendered
@@ -79,19 +81,19 @@ public class ChatHudMixin {
 	}
 
 	@ModifyArg(method = "render", index = 1, at = @At(
-			value = "INVOKE",
-			target = "Lnet/minecraft/client/util/math/MatrixStack;translate(FFF)V",
-			ordinal = 1
+		value = "INVOKE",
+		target = "Lnet/minecraft/client/util/math/MatrixStack;translate(FFF)V",
+		ordinal = 1
 	))
 	private float applyYOffset(float y) {
 		// Apply the offset
 		calculateYOffset();
 
 		// Raised mod compatibility
-		if (FabricLoader.getInstance().getObjectShare().get("raised:hud") instanceof Integer distance) {
+		if (ChatAnimationExpectPlatform.getObjectShareItem("raised:hud") instanceof Integer distance) {
 			// for Raised 1.2.0+
 			y -= distance;
-		} else if (FabricLoader.getInstance().getObjectShare().get("raised:distance") instanceof Integer distance) {
+		} else if (ChatAnimationExpectPlatform.getObjectShareItem("raised:distance") instanceof Integer distance) {
 			y -= distance;
 		}
 
@@ -99,7 +101,7 @@ public class ChatHudMixin {
 	}
 
 	@ModifyVariable(method = "render", ordinal = 3, at = @At(
-			value = "STORE"
+		value = "STORE"
 	))
 	private double modifyOpacity(double originalOpacity) {
 		double opacity = originalOpacity;
@@ -115,7 +117,7 @@ public class ChatHudMixin {
 	}
 
 	@ModifyVariable(method = "render", at = @At(
-			value = "STORE"
+		value = "STORE"
 	))
 	private MessageIndicator removeMessageIndicator(MessageIndicator messageIndicator) {
 		// Don't allow the chat indicator bar to be rendered

@@ -1,6 +1,7 @@
 package com.wulian.chatanimation.neoforge.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import com.wulian.chatanimation.ChatAnimationExpectPlatform;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.ChatHud;
 import net.minecraft.client.gui.hud.ChatHudLine;
@@ -8,6 +9,8 @@ import net.minecraft.client.gui.hud.MessageIndicator;
 import net.minecraft.network.message.MessageSignatureData;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.MathHelper;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -21,7 +24,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@OnlyIn(Dist.CLIENT)
 @Mixin(ChatHud.class)
 public class ChatHudMixin {
 	@Shadow private int scrolledLines;
@@ -55,8 +58,8 @@ public class ChatHudMixin {
 	@Unique private int chatDisplacementY = 0;
 
 	@Inject(method = "render", at = @At(
-			value = "INVOKE",
-			target = "Lnet/minecraft/client/gui/hud/ChatHudLine$Visible;addedTime()I"
+		value = "INVOKE",
+		target = "Lnet/minecraft/client/gui/hud/ChatHudLine$Visible;addedTime()I"
 	))
 	public void getChatLineIndex(CallbackInfo ci, @Local(ordinal = 13) int chatLineIndex) {
 		// Capture which chat line is currently being rendered
@@ -78,28 +81,27 @@ public class ChatHudMixin {
 	}
 
 	@ModifyArg(method = "render", index = 1, at = @At(
-			value = "INVOKE",
-			target = "Lnet/minecraft/client/util/math/MatrixStack;translate(FFF)V",
-			ordinal = 1
+		value = "INVOKE",
+		target = "Lnet/minecraft/client/util/math/MatrixStack;translate(FFF)V",
+		ordinal = 1
 	))
 	private float applyYOffset(float y) {
 		// Apply the offset
 		calculateYOffset();
 
 		// Raised mod compatibility
-		// 不会
-		// if (FabricLoader.getInstance().getObjectShare().get("raised:hud") instanceof Integer distance) {
+		if (ChatAnimationExpectPlatform.getObjectShareItem("raised:hud") instanceof Integer distance) {
 			// for Raised 1.2.0+
-//			y -= distance;
-//		} else if (FabricLoader.getInstance().getObjectShare().get("raised:distance") instanceof Integer distance) {
-//			y -= distance;
-//		}
+			y -= distance;
+		} else if (ChatAnimationExpectPlatform.getObjectShareItem("raised:distance") instanceof Integer distance) {
+			y -= distance;
+		}
 
 		return y + chatDisplacementY;
 	}
 
 	@ModifyVariable(method = "render", ordinal = 3, at = @At(
-			value = "STORE"
+		value = "STORE"
 	))
 	private double modifyOpacity(double originalOpacity) {
 		double opacity = originalOpacity;
@@ -115,7 +117,7 @@ public class ChatHudMixin {
 	}
 
 	@ModifyVariable(method = "render", at = @At(
-			value = "STORE"
+		value = "STORE"
 	))
 	private MessageIndicator removeMessageIndicator(MessageIndicator messageIndicator) {
 		// Don't allow the chat indicator bar to be rendered
