@@ -11,9 +11,6 @@ architectury {
 subprojects {
     apply plugin: "dev.architectury.loom"
 
-    loom {
-        silentMojangMappingsLicense()
-    }
     dependencies {
         minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
         mappings "net.fabricmc:yarn:${rootProject.yarn_mappings}:v2"
@@ -64,6 +61,6 @@ forgix {
 
     custom {
         projectName = "neoforge"
-        jarLocation = "build/libs/${rootProject.archives_base_name}-neoforge-${ rootProject.version }.jar"
+        jarLocation = "build/libs/${rootProject.archives_base_name}-neoforge-${rootProject.version}.jar"
     }
 }
