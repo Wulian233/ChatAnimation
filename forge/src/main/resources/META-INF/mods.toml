@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "[44,)"
+issueTrackerURL = "https://github.com/Wulian233/ChatAnimation/issues"
+license = "MIT"
+
+[[mods]]
+modId = "chatanimation"
+version = "${version}"
+displayName = "Chat Animation"
+displayURL = "https://github.com/Wulian233/ChatAnimation"
+authors = "Wulian233"
+description = '''
+Makes chat messages appear with a smooth animation.
+'''
+#logoFile = "icon.png"
+
+[[dependencies.chatanimation]]
+    modId="forge"
+    mandatory=true
+    versionRange="[44,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.chatanimation]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.20.3,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.chatanimation]]
+    modId = "architectury"
+    mandatory = true
+    versionRange = "*"
+    ordering = "AFTER"
+    side = "BOTH"
