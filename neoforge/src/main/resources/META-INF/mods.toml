@@ -1,33 +1,33 @@
 modLoader = "javafml"
 loaderVersion = "[1,)"
-issueTrackerURL = "https://github.com/Wulian233/ChatAnimation/issues"
+issueTrackerURL = "https://github.com/Wulian233/Chat-Impressive-Animation/issues"
 license = "MIT"
 
 [[mods]]
-modId = "chatanimation"
+modId = "chatimpressiveanimation"
 version = "${version}"
-displayName = "Chat Animation"
-displayURL = "https://github.com/Wulian233/ChatAnimation"
-authors = "Wulian233"
+displayName = "Chat Impressive Animation"
+displayURL = "https://github.com/Wulian233/Chat-Impressive-Animation"
+authors = "Wulian233, TexTrue"
 description = '''
 Makes chat messages appear with a smooth animation.
 '''
-#logoFile = "icon.png"
+logoFile = "icon.png"
 
 [[mixins]]
-config = "chatanimation.mixins.json"
+config = "chatimpressiveanimation.mixins.json"
 
 [[mixins]]
-config = "chatanimation.neoforge.mixins.json"
+config = "chatimpressiveanimation.neoforge.mixins.json"
 
-[[dependencies.chatanimation]]
+[[dependencies.chatimpressiveanimation]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.20.3,)"
+versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.chatanimation]]
+[[dependencies.chatimpressiveanimation]]
 modId = "architectury"
 type = "required"
 versionRange = "*"

@@ -1,8 +1,8 @@
 <div align="center"><img height="150" src="common/src/main/resources/icon.png" width="150"/>
 
-# Chat Animation
+# Chat Impressive Animation
 
-[![GitHub license](https://img.shields.io/github/license/Wulian233/ChatAnimation?style=flat-square)](https://raw.githubusercontent.com/Wulian233/ChatAnimation/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Wulian233/Chat-Impressive-Animation?style=flat-square)](https://raw.githubusercontent.com/Wulian233/Chat-Impressive-Animation/master/LICENSE)
 ![Environment: Client](https://img.shields.io/badge/environment-client-1976d2?style=flat-square)
 
 [ChatAnimation](https://github.com/Ezzenix/ChatAnimation) unofficial architectury port.

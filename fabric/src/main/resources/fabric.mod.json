@@ -1,29 +1,29 @@
 {
 	"schemaVersion": 1,
-	"id": "chatanimation",
+	"id": "chatimpressiveanimation",
 	"version": "${version}",
-	"name": "Chat Animation",
+	"name": "Chat Impressive Animation",
 	"description": "Makes chat messages appear with a smooth animation.",
 	"authors": [
-		"Wulian233"
+		"Wulian233, TexTrue"
 	],
 	"contact": {
-		"sources": "https://github.com/Wulian233/ChatAnimation"
+		"sources": "https://github.com/Wulian233/Chat-Impressive-Animation"
 	},
 	"license": "MIT",
 	"icon": "icon.png",
 	"environment": "client",
 	"entrypoints": {
 	    "client": [
-			"com.wulian.chatanimation.fabric.ChatAnimationClientFabric"
+          "com.wulian.chatimpressiveanimation.fabric.ChatImpressiveAnimationClientFabric"
     ]
 	},
 	"mixins": [
-		"chatanimation.mixins.json",
-		"chatanimation.fabric.mixins.json"
+		"chatimpressiveanimation.mixins.json",
+		"chatimpressiveanimation.fabric.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.2",
+		"fabricloader": "*",
 		"minecraft": "1.20.x",
 		"architectury": "*"
 	}
