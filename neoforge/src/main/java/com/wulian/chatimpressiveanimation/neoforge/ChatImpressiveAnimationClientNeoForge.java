@@ -8,7 +8,7 @@ import com.wulian.chatimpressiveanimation.ChatImpressiveAnimation;
 public class ChatImpressiveAnimationClientNeoForge {
     public ChatImpressiveAnimationClientNeoForge() {
         if (FMLLoader.getDist().isClient()) {
-			ChatImpressiveAnimation.LOGGER.info("Chat Animation is loaded!");
+			ChatImpressiveAnimation.LOGGER.info("Chat Impressive Animation is loaded!");
         }
     }
 }

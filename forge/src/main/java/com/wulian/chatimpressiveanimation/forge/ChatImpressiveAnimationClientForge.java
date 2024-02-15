@@ -8,7 +8,7 @@ import com.wulian.chatimpressiveanimation.ChatImpressiveAnimation;
 public class ChatImpressiveAnimationClientForge {
     public ChatImpressiveAnimationClientForge() {
         if (FMLLoader.getDist().isClient()) {
-			ChatImpressiveAnimation.LOGGER.info("Chat Animation is loaded!");
+			ChatImpressiveAnimation.LOGGER.info("Chat Impressive Animation is loaded!");
         }
     }
 }
