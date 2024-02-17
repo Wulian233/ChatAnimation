@@ -11,9 +11,7 @@ project.archivesBaseName = rootProject.archivesBaseName + "-forge"
 
 loom {
 	forge {
-		mixinConfigs = [
-			"chatimpressiveanimation.mixins.json", "chatimpressiveanimation.forge.mixins.json"
-		]
+		mixinConfigs("chatimpressiveanimation.mixins.json", "chatimpressiveanimation.forge.mixins.json")
 	}
 }
 
