@@ -9,8 +9,12 @@
 
 Makes chat messages appear with a smooth animation.
 
-<img alt="forge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/forge_vector.svg">
-<img alt="fabric" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">
+<a href="https://modrinth.com/project/chat-impressive-animation/">
+<img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
+</a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/chat-impressive-animation">
+<img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg">
+</a>
 <img alt="architectury-api" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/requires/architectury-api_vector.svg">
 </div>
 
@@ -22,13 +26,15 @@ Makes chat messages appear with a smooth animation.
 
 ## Screenshots
 
-![]()
-
+<img src="https://vmct-cn.top/img/CIA-preview.gif"></img>
 
 
 ## 📖 Usage
 
 Using this mod is very simple!
 
-Install Architectury API mod and This mod, then you can use it!
+Install Architectury API mod and this mod, then you can use it!
 
+## License
+
+This mod is available under [the MIT license](LICENSE).
