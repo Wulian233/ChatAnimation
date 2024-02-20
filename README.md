@@ -1,11 +1,11 @@
-<div align="center"><img height="150" src="common/src/main/resources/icon.png" width="150"/>
+<div align="center"><img height="150" src="https://cdn.modrinth.com/data/DnL1AGAI/517a08d79d7949cc6ae49a8ee66ad967e962809d.png" width="150"/>
 
 # Chat Impressive Animation
 
-[![GitHub license](https://img.shields.io/github/license/Wulian233/Chat-Impressive-Animation?style=flat-square)](https://raw.githubusercontent.com/Wulian233/Chat-Impressive-Animation/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Wulian233/Chat-Impressive-Animation?style=flat-square)](LICENSE)
 ![Environment: Client](https://img.shields.io/badge/environment-client-1976d2?style=flat-square)
 
-[ChatAnimation](https://github.com/Ezzenix/ChatAnimation) unofficial architectury port.
+[Chat Animation](https://github.com/Ezzenix/ChatAnimation) unofficial architectury port.
 
 Makes chat messages appear with a smooth animation.
 
@@ -20,14 +20,19 @@ Makes chat messages appear with a smooth animation.
 
 ## 📖 What's this mod? 
 
+Chat Impressive Animation(CIA) is [Chat Animation](https://github.com/Ezzenix/ChatAnimation) unofficial architectury port, now available on Fabric Forge and Neoforge. This mod makes the chat look better by adding animations. It also removes the message indicator.
+
 ## ✅ Features:
 
-- TODO
+- Open chat animation
+- Message sending animation(mc1.20.x Forge unsupport)
+- Removes the message indicator(mc1.19.1+)
 
-## Screenshots
+## ✨ Screenshots
+
+<img src="https://s11.ax1x.com/2024/02/19/pFYJyw9.jpg"></img>
 
 <img src="https://vmct-cn.top/img/CIA-preview.gif"></img>
-
 
 ## 📖 Usage
 
@@ -35,6 +40,6 @@ Using this mod is very simple!
 
 Install Architectury API mod and this mod, then you can use it!
 
-## License
+## 👀 License
 
 This mod is available under [the MIT license](LICENSE).
