@@ -23,8 +23,8 @@
 		"chatimpressiveanimation.fabric.mixins.json"
 	],
 	"depends": {
-		"fabricloader": "*",
-		"minecraft": "1.20.x",
+        "fabricloader": ">=0.15.0",
+        "minecraft": ">=1.19.1",
 		"architectury": "*"
 	}
 }
