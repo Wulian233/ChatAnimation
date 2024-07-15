@@ -8,15 +8,17 @@
 		"Wulian233, TexTrue"
 	],
 	"contact": {
-		"sources": "https://github.com/Wulian233/Chat-Impressive-Animation"
-	},
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/chat-impressive-animation",
+		"sources": "https://github.com/Wulian233/Chat-Impressive-Animation",
+		"issues": "https://github.com/Wulian233/Chat-Impressive-Animation/issues"
+	  },
 	"license": "MIT",
 	"icon": "icon.png",
 	"environment": "client",
 	"entrypoints": {
 	    "client": [
           "com.wulian.chatimpressiveanimation.fabric.ChatImpressiveAnimationClientFabric"
-    ]
+    	]
 	},
 	"mixins": [
 		"chatimpressiveanimation.mixins.json",
