@@ -1,4 +1,4 @@
-<div align="center"><img height="150" src="https://cdn.modrinth.com/data/DnL1AGAI/517a08d79d7949cc6ae49a8ee66ad967e962809d.png" width="150"/>
+<div align="center"><img height="150" src="common/src/main/resources/icon.png" width="150"/>
 
 # 聊动魅影
 
@@ -9,7 +9,7 @@
 
 本模组是[Chat Animation](https://github.com/Ezzenix/ChatAnimation) 的非官方移植。
 
-为聊天添加了一些平滑的淡入动画
+添加了一些关于聊天栏的动画，如打开聊天栏，发送消息等。同时删除了提示类消息左侧的白条
 
 <a href="https://modrinth.com/project/chat-impressive-animation/">
 <img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
@@ -22,7 +22,10 @@
 
 ## 📖 这个模组是什么？
 
-聊动魅影（英文缩写CIA）是[Chat Animation](https://github.com/Ezzenix/ChatAnimation)的非官方移植版，现可在Fabric Forge和Neoforge使用。这个模组添加了一些关于聊天栏的动画，并且删除提示类消息左侧的白条。
+聊动魅影（英文缩写CIA）是[Chat Animation](https://github.com/Ezzenix/ChatAnimation)的非官方移植版，现可在Fabric Forge和Neoforge使用。
+
+这个模组添加了一些关于聊天栏的动画，如打开聊天栏，发送消息等。同时删除了提示类消息左侧的白条
+
 
 ## ✅  功能：
 
@@ -32,9 +35,9 @@
 
 ## ✨ 截图
 
-<img src="https://s11.ax1x.com/2024/02/19/pFYJyw9.jpg"></img>
+<img src="img/message-indicator.jpg" width="550"/>
 
-<img src="https://vmct-cn.top/img/CIA-preview.gif"></img>
+<img src="img/preview.gif" width="350"/>
 
 ## 📖 使用
 
@@ -44,4 +47,4 @@
 
 ## 👀 协议
 
-此模组使用MIT协议
+此模组使用MIT许可证

@@ -1,5 +1,6 @@
 package com.wulian.chatimpressiveanimation.mixin;
 
+import com.wulian.chatimpressiveanimation.config.ModConfigs;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ChatScreen;
@@ -17,7 +18,7 @@ public class ChatScreenMixin {
 
     @Inject(method = "render", at = @At("HEAD"))
     private void render(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-        MinecraftClient client = MinecraftClient.getInstance();
+		MinecraftClient client = MinecraftClient.getInstance();
         if (client.player != null) {
             if (!wasOpenedLastFrame && !client.player.isSleeping()) {
                 wasOpenedLastFrame = true;

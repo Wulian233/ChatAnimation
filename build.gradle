@@ -29,7 +29,7 @@ allprojects {
     group = rootProject.maven_group
 
     repositories {
-    }
+	}
 
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"

@@ -1,0 +1,9 @@
+{
+	"modmenu.nameTranslation.chatimpressiveanimation": "Chat Impressive Animation",
+	"modmenu.descriptionTranslation.chatimpressiveanimation": "This mod makes the chat look better by adding animations. Such as opening chat, sending messages. It also removes the message indicator.",
+
+	"text.autoconfig.chatimpressiveanimation.title": "Chat Impressive Animation",
+	"text.autoconfig.chatimpressiveanimation.option.enableOpenChatAnimation": "Enable open chat animation",
+	"text.autoconfig.chatimpressiveanimation.option.enableChatSendingAnimation": "Enable message sending animation",
+	"text.autoconfig.chatimpressiveanimation.option.removeMessageIndicator": "Removes the message indicator"
+}

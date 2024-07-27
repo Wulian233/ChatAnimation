@@ -10,7 +10,7 @@ displayName = "Chat Impressive Animation"
 displayURL = "https://github.com/Wulian233/Chat-Impressive-Animation/"
 authors = "Wulian233, TexTrue"
 description = '''
-Makes chat messages appear with a smooth animation.
+This mod makes the chat look better by adding animations. Such as opening chat, sending messages. It also removes the message indicator.
 '''
 logoFile = "icon.png"
 
@@ -34,3 +34,10 @@ logoFile = "icon.png"
     versionRange = "*"
     ordering = "AFTER"
     side = "BOTH"
+
+[[dependencies.chatimpressiveanimation]]
+		modId = "cloth_config"
+		mandatory = true
+		versionRange = "*"
+		ordering = "AFTER"
+		side = "BOTH"
