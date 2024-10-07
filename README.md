@@ -44,7 +44,7 @@ This mod makes the chat look better by adding animations. Such as opening chat, 
 
 Using this mod is very simple!
 
-Install Architectury API mod and this mod, then you can use it!
+First of all, you need to install Architectury API and Cloth Config API, and then you can install this module and use it!
 
 ## 👀 License
 

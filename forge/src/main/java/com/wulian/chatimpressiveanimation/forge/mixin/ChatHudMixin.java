@@ -3,7 +3,6 @@ package com.wulian.chatimpressiveanimation.forge.mixin;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.wulian.chatimpressiveanimation.ChatImpressiveAnimationExpectPlatform;
 import com.wulian.chatimpressiveanimation.config.ConfigUtil;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.ChatHud;
 import net.minecraft.client.gui.hud.ChatHudLine;
 import net.minecraft.client.gui.hud.MessageIndicator;
@@ -27,27 +26,8 @@ import java.util.List;
 @Mixin(ChatHud.class)
 public class ChatHudMixin {
 	@Shadow private int scrolledLines;
-	//@Shadow @Final private List<ChatHudLine> messages;
 	@Shadow @Final private List<ChatHudLine.Visible> visibleMessages;
-	@Shadow private boolean hasUnreadNewMessages;
-	@Shadow @Final private MinecraftClient client;
-	//@Shadow @Final private static final Logger LOGGER = LogUtils.getLogger();
-
-	//@Shadow private void drawIndicatorIcon(DrawContext context, int x, int y, MessageIndicator.Icon icon) { }
-	//@Shadow private int getIndicatorX(ChatHudLine.Visible line) { return 0; }
-	@Shadow private static double getMessageOpacityMultiplier(int age) { return 0; }
-	@Shadow private boolean isChatHidden() { return false; }
 	@Shadow private int getLineHeight() { return 0; }
-	@Shadow private boolean isChatFocused() { return false; }
-	//@Shadow private double toChatLineX(double x) { return 0; }
-	//@Shadow private double toChatLineY(double y) { return 0; }
-	//@Shadow private int getMessageIndex(double chatLineX, double chatLineY) { return 0; }
-	@Shadow public int getVisibleLineCount() { return 0; }
-	@Shadow public double getChatScale() {
-		return 0;
-	}
-	@Shadow public int getWidth() { return 0; }
-
 	@Unique private final ArrayList<Long> messageTimestamps = new ArrayList<>();
 
 	@Unique private final float fadeOffsetYScale = 0.8f; // scale * lineHeight
