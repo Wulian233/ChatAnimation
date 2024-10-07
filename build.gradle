@@ -1,7 +1,7 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.6-SNAPSHOT" apply false
-    id "io.github.pacifistmc.forgix" version "1.+"
+    id "dev.architectury.loom" version "1.7-SNAPSHOT" apply false
+	id "com.hypherionmc.modutils.modfusioner" version "1.0.+"
     id "com.github.johnrengelman.shadow" version "8.+" apply false
 }
 
@@ -31,35 +31,34 @@ allprojects {
     repositories {
 	}
 
-    tasks.withType(JavaCompile) {
-        options.encoding = "UTF-8"
-        options.release = 17
-    }
+	tasks.withType(JavaCompile).configureEach {
+		options.encoding = "UTF-8"
+		options.release = 17
+	}
 
-    java {
+	java {
         withSourcesJar()
     }
 
-forgix {
-    group = rootProject.maven_group
-    mergedJarName = "${rootProject.archives_base_name}-${rootProject.version}.jar"
-    outputDir = "build/libs/forgix"
+	fusioner {
+		packageGroup = rootProject.maven_group
+		mergedJarName = "${rootProject.archives_base_name}"
+		outputDirectory = "build/merged"
+		jarVersion = rootProject.version
 
-    forge {
-        projectName = "forge"
-        jarLocation = "build/libs/${rootProject.archives_base_name}-forge-${rootProject.version}.jar"
-    }
+		forge {
+			projectName = "forge"
+			inputTaskName = "remapJar"
+		}
 
-    fabric {
-        projectName = "fabric"
-        jarLocation = "build/libs/${rootProject.archives_base_name}-fabric-${rootProject.version}.jar"
-    }
+		neoforge {
+			projectName = "neoforge"
+			inputTaskName = "remapJar"
+		}
 
-    custom {
-        projectName = "neoforge"
-        jarLocation = "build/libs/${rootProject.archives_base_name}-neoforge-${ rootProject.version }.jar"
-    }
-}
-
-mergeJars.dependsOn(build)
+		fabric {
+			projectName = "fabric"
+			inputTaskName = "remapJar"
+		}
+	}
 }

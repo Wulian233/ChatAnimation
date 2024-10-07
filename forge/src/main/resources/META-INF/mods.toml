@@ -24,7 +24,7 @@ logoFile = "icon.png"
 [[dependencies.chatimpressiveanimation]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "[1.20,1.20.4]"
+    versionRange = "[1.20,1.21)"
     ordering = "NONE"
     side = "BOTH"
 

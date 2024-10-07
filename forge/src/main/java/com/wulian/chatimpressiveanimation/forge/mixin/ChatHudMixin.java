@@ -2,13 +2,13 @@ package com.wulian.chatimpressiveanimation.forge.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.wulian.chatimpressiveanimation.ChatImpressiveAnimationExpectPlatform;
+import com.wulian.chatimpressiveanimation.config.ConfigUtil;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.ChatHud;
 import net.minecraft.client.gui.hud.ChatHudLine;
 import net.minecraft.client.gui.hud.MessageIndicator;
 import net.minecraft.network.message.MessageSignatureData;
 import net.minecraft.text.Text;
-import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.spongepowered.asm.mixin.Final;
@@ -18,7 +18,6 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
@@ -86,6 +85,7 @@ public class ChatHudMixin {
 		ordinal = 1
 	))
 	private float applyYOffset(float y) {
+		if (!ConfigUtil.getConfig().enableChatSendingAnimation) return y;
 		// Apply the offset
 		calculateYOffset();
 
@@ -98,30 +98,6 @@ public class ChatHudMixin {
 		}
 
 		return y + chatDisplacementY;
-	}
-
-	@ModifyVariable(method = "render", ordinal = 3, at = @At(
-		value = "STORE"
-	))
-	private double modifyOpacity(double originalOpacity) {
-		double opacity = originalOpacity;
-		// Calculate current required opacity for currently rendered line to achieve fade in effect
-		try {
-			long timestamp = messageTimestamps.get(chatLineIndex);
-			long timeAlive = System.currentTimeMillis() - timestamp;
-			if (timeAlive < fadeTime && this.scrolledLines == 0) {
-				opacity = opacity * (0.5 + MathHelper.clamp(timeAlive/fadeTime, 0, 1)/2);
-			}
-		} catch (Exception ignored) {}
-		return opacity;
-	}
-
-	@ModifyVariable(method = "render", at = @At(
-		value = "STORE"
-	))
-	private MessageIndicator removeMessageIndicator(MessageIndicator messageIndicator) {
-		// Don't allow the chat indicator bar to be rendered
-		return null;
 	}
 
 	@Inject(method = "addMessage(Lnet/minecraft/text/Text;Lnet/minecraft/network/message/MessageSignatureData;ILnet/minecraft/client/gui/hud/MessageIndicator;Z)V", at = @At("TAIL"))

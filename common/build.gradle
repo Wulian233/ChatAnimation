@@ -9,7 +9,7 @@ dependencies {
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"
 	modApi "me.shedaniel.cloth:cloth-config:${rootProject.clothconfig_version}"
 
-	compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.0"))
+	compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
 }
 
 publishing {

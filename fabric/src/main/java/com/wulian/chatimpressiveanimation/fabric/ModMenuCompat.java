@@ -2,15 +2,17 @@ package com.wulian.chatimpressiveanimation.fabric;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import me.shedaniel.autoconfig.AutoConfig;
 import com.wulian.chatimpressiveanimation.config.ModConfigs;
+import me.shedaniel.autoconfig.AutoConfig;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
-public class ModMenuCompat implements ModMenuApi{
+@Environment(EnvType.CLIENT)
+class ModMenuCompat implements ModMenuApi {
 	@Override
 	public ConfigScreenFactory<?> getModConfigScreenFactory() {
-		return screen -> AutoConfig.getConfigScreen(ModConfigs.class, screen).get();
+		return parent -> AutoConfig.getConfigScreen(ModConfigs.class, parent).get();
 	}
 }
-
 
 

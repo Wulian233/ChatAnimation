@@ -1,13 +1,9 @@
 package com.wulian.chatimpressiveanimation.forge.loader.impl;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.function.BiConsumer;
-
 import com.wulian.chatimpressiveanimation.forge.loader.api.ObjectShare;
+
+import java.util.*;
+import java.util.function.BiConsumer;
 
 final class ObjectShareImpl implements ObjectShare {
 	private final Map<String, Object> values = new HashMap<>();

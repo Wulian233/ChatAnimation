@@ -4,6 +4,8 @@
 
 [![GitHub license](https://img.shields.io/github/license/Wulian233/Chat-Impressive-Animation?style=flat-square)](LICENSE)
 ![Environment: Client](https://img.shields.io/badge/environment-client-1976d2?style=flat-square)
+[![CurseForge-badge](https://img.shields.io/curseforge/dt/972468?style=flat-square&logo=curseforge&label=CurseForge)](https://minecraft.curseforge.com/projects/972468/files)
+![Modrinth Downloads](https://img.shields.io/modrinth/dt/chat-impressive-animation?label=Modrinth&logo=Modrinth&style=flat-square)
 
 [English](README.md) 简体中文
 

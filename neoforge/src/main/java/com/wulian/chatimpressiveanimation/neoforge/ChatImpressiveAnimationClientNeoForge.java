@@ -1,8 +1,8 @@
 package com.wulian.chatimpressiveanimation.neoforge;
 
+import com.wulian.chatimpressiveanimation.ChatImpressiveAnimation;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLLoader;
-import com.wulian.chatimpressiveanimation.ChatImpressiveAnimation;
 
 @Mod(ChatImpressiveAnimation.MOD_ID)
 public class ChatImpressiveAnimationClientNeoForge {

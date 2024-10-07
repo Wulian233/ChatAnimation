@@ -12,11 +12,17 @@ loom {
 }
 
 configurations {
-    common
-    shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
-    compileClasspath.extendsFrom common
-    runtimeClasspath.extendsFrom common
-    developmentForge.extendsFrom common
+	common {
+		canBeResolved = true
+		canBeConsumed = false
+	}
+	compileClasspath.extendsFrom common
+	runtimeClasspath.extendsFrom common
+	developmentFabric.extendsFrom common
+	shadowBundle {
+		canBeResolved = true
+		canBeConsumed = false
+	}
 }
 
 dependencies {
@@ -25,11 +31,11 @@ dependencies {
 	modApi "me.shedaniel.cloth:cloth-config-forge:${rootProject.clothconfig_version}"
 
     // only forge, because fabric & neoforge include mixinextras
-    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.0"))
-    implementation(include("io.github.llamalad7:mixinextras-forge:0.4.0"))
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
+    implementation(include("io.github.llamalad7:mixinextras-forge:0.4.1"))
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+	shadowBundle(project(path: ":common", configuration: "transformProductionForge")) { transitive false }
 }
 
 loom {
@@ -52,14 +58,14 @@ shadowJar {
     exclude "fabric.mod.json"
     exclude "architectury.common.json"
 
-    configurations = [project.configurations.shadowCommon]
+	configurations = [project.configurations.shadowBundle]
     archiveClassifier.set("dev-shadow")
 }
 
 remapJar {
-    input.set shadowJar.archiveFile
-    dependsOn shadowJar
-    archiveClassifier.set(null)
+	inputFile.set shadowJar.archiveFile
+	dependsOn shadowJar
+	archiveClassifier.set(null)
 }
 
 jar {
@@ -70,22 +76,4 @@ sourcesJar {
     def commonSources = project(":common").sourcesJar
     dependsOn commonSources
     from commonSources.archiveFile.map { zipTree(it) }
-}
-
-components.java {
-    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
-        skip()
-    }
-}
-
-publishing {
-    publications {
-        mavenForge(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
-            from components.java
-        }
-    }
-
-    repositories {
-    }
 }
