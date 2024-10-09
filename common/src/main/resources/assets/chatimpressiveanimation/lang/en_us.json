@@ -4,6 +4,6 @@
 
 	"text.autoconfig.chatimpressiveanimation.title": "Chat Impressive Animation",
 	"text.autoconfig.chatimpressiveanimation.option.enableChatSendingAnimation": "Enable message sending animation",
-	"text.autoconfig.chatimpressiveanimation.option.enableOpenChatAnimation": "Enable open chat animation",
+	"text.autoconfig.chatimpressiveanimation.option.enableChatBarAnimation": "Enable chat bar animations when opening and closing",
 	"text.autoconfig.chatimpressiveanimation.option.removeMessageIndicator": "Removes the message indicator"
 }

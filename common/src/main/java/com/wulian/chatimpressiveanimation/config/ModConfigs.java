@@ -7,6 +7,6 @@ import me.shedaniel.autoconfig.annotation.Config;
 @Config(name = ChatImpressiveAnimation.MOD_ID)
 public class ModConfigs implements ConfigData {
 	public boolean enableChatSendingAnimation = true;
-	public boolean enableOpenChatAnimation = true;
+	public boolean enableChatBarAnimation = true;
 	public boolean removeMessageIndicator = true;
 }

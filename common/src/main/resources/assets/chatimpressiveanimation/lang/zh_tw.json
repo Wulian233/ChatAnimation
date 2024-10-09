@@ -4,6 +4,6 @@
 
 	"text.autoconfig.chatimpressiveanimation.title": "聊動魅影",
 	"text.autoconfig.chatimpressiveanimation.option.enableChatSendingAnimation": "啟用消息發送動畫",
-	"text.autoconfig.chatimpressiveanimation.option.enableOpenChatAnimation": "啟用打開聊天欄動畫",
+	"text.autoconfig.chatimpressiveanimation.option.enableChatBarAnimation": "啟用打開和關閉時的聊天欄動畫",
 	"text.autoconfig.chatimpressiveanimation.option.removeMessageIndicator": "刪除提示類消息左側的白條"
 }
