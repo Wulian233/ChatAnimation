@@ -9,7 +9,7 @@
 
 [English](README.md) 简体中文
 
-本模组是[Chat Animation](https://github.com/Ezzenix/ChatAnimation) 的非官方移植。
+本模组是[Chat Animation](https://github.com/Ezzenix/ChatAnimation) 的非官方多平台移植版。
 
 添加了一些关于聊天栏的动画，如打开聊天栏，发送消息等。同时删除了提示类消息左侧的白条
 
@@ -29,10 +29,11 @@
 这个模组添加了一些关于聊天栏的动画，如打开聊天栏，发送消息等。同时删除了提示类消息左侧的白条
 
 
-## ✅  功能：
+## ✅  功能
 
 - 打开聊天栏动画
-- 消息发送动画（不支持1.20.x Forge）
+- 关闭聊天栏动画
+- 消息发送动画（不支持Forge）
 - 删除提示类消息左侧的白条（于mc 1.19.1加入）
 
 ## ✨ 截图

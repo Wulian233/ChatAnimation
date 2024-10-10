@@ -52,21 +52,20 @@ public class ChatScreenMixin {
 			float closeAlpha = timeSinceClose / FADE_TIME;
 			float modifiedCloseAlpha = C3 * closeAlpha * closeAlpha * closeAlpha - C1 * closeAlpha * closeAlpha;
 			offsetY = modifiedCloseAlpha * FADE_OFFSET * screenFactor;
-			// 将这里的位移方向改为正值，向下移动
-			context.getMatrices().translate(0, offsetY, 0); // 正向位移，关闭时向下
+			context.getMatrices().translate(0, offsetY, 0);
 		}
 	}
 
 	@Inject(method = "keyPressed", at = @At("HEAD"), cancellable = true)
 	private void onKeyPressed(int keyCode, int scanCode, int modifiers, CallbackInfoReturnable<Boolean> cir) {
-		if (keyCode == 256) { // ESC key
+		if (keyCode == 256) { // ESC
 			if (ConfigUtil.getConfig().enableChatBarAnimation) {
 				isClosing = true;
 				closeStartTime = System.currentTimeMillis();
 			} else {
 				MinecraftClient.getInstance().setScreen(null);
 			}
-			cir.cancel(); // Cancel the default behavior to allow the animation to complete
+			cir.cancel();
 		}
 	}
 

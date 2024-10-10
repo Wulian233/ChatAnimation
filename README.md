@@ -24,13 +24,14 @@ This mod makes the chat look better by adding animations. Such as opening chat, 
 
 ## 📖 What's this mod? 
 
-Chat Impressive Animation(CIA) is [Chat Animation](https://github.com/Ezzenix/ChatAnimation) unofficial architectury port, now available on Fabric Forge and Neoforge. 
+Chat Impressive Animation(CIA) is [Chat Animation](https://github.com/Ezzenix/ChatAnimation)'s unofficial architectury port, now available on Fabric Forge and Neoforge. 
 
 This mod makes the chat look better by adding animations. Such as opening chat, sending messages. It also removes the message indicator.
 
-## ✅ Features:
+## ✅ Features
 
 - Open chat animation
+- Closing chat animation
 - Message sending animation (Unsupported 1.20.x Forge)
 - Removes the message indicator(mc1.19.1+)
 

@@ -1,4 +1,4 @@
-package com.wulian.chatimpressiveanimation.forge;
+package com.wulian.chatimpressiveanimation.neoforge;
 
 import com.wulian.chatimpressiveanimation.neoforge.loader.api.ForgifiedLoader;
 
