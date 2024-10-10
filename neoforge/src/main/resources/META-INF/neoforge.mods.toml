@@ -23,14 +23,14 @@ config = "chatimpressiveanimation.neoforge.mixins.json"
 [[dependencies.chatimpressiveanimation]]
 modId = "neoforge"
 type = "required"
-versionRange = "[1,20.5)"
+versionRange = "[20.5,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.chatimpressiveanimation]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.20.3,1.20.4]"
+versionRange = "[1.20.5,1.21)"
 ordering = "NONE"
 side = "BOTH"
 

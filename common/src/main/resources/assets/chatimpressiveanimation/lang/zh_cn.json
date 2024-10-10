@@ -1,4 +1,6 @@
 {
+	"fml.menu.mods.info.displayname.chatimpressiveanimation": "聊动魅影",
+	"fml.menu.mods.info.description.chatimpressiveanimation": "添加了一些关于聊天栏的动画，如打开聊天栏，发送消息等。同时删除了提示类消息左侧的白条",
 	"modmenu.nameTranslation.chatimpressiveanimation": "聊动魅影",
 	"modmenu.descriptionTranslation.chatimpressiveanimation": "添加了一些关于聊天栏的动画，如打开聊天栏，发送消息等。同时删除了提示类消息左侧的白条",
 
