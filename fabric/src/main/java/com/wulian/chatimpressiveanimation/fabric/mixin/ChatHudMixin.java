@@ -82,9 +82,9 @@ public class ChatHudMixin {
 
 	@Inject(method = "addMessage(Lnet/minecraft/text/Text;Lnet/minecraft/network/message/MessageSignatureData;ILnet/minecraft/client/gui/hud/MessageIndicator;Z)V", at = @At("TAIL"))
 	private void addMessage(Text message, MessageSignatureData signature, int ticks, MessageIndicator indicator, boolean refresh, CallbackInfo ci) {
-		messageTimestamps.add(0, System.currentTimeMillis());
+		messageTimestamps.addFirst(System.currentTimeMillis());
 		while (this.messageTimestamps.size() > this.visibleMessages.size()) {
-			this.messageTimestamps.remove(this.messageTimestamps.size() - 1);
+			this.messageTimestamps.removeLast();
 		}
 	}
 }
