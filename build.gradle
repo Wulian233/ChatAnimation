@@ -46,11 +46,6 @@ allprojects {
 		outputDirectory = "build/merged"
 		jarVersion = rootProject.version
 
-		forge {
-			projectName = "forge"
-			inputTaskName = "remapJar"
-		}
-
 		neoforge {
 			projectName = "neoforge"
 			inputTaskName = "remapJar"
