@@ -17,10 +17,7 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": [
-				"com.wulian.chatimpressiveanimation.fabric.ChatImpressiveAnimationClientFabric"
-		],
-		"modmenu": [
-			"com.wulian.chatimpressiveanimation.fabric.ModMenuCompat"
+			"com.wulian.chatimpressiveanimation.fabric.ChatImpressiveAnimationClientFabric"
 		]
 	},
 	"mixins": [

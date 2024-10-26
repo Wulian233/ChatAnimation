@@ -48,7 +48,7 @@
 
 使用这个模组非常简单！
 
-首先需要安装前置模组Architectury API和Cloth Config API，然后即可安装本模组使用啦！
+首先需要安装前置模组Cloth Config API，然后即可安装本模组使用啦！
 
 ## 👀 协议
 

@@ -35,13 +35,6 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.chatimpressiveanimation]]
-modId = "architectury"
-type = "required"
-versionRange = "*"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.chatimpressiveanimation]]
 modId = "cloth_config"
 type = "required"
 versionRange = "*"
