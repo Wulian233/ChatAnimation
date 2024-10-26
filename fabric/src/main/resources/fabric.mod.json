@@ -17,10 +17,7 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": [
-				"com.wulian.chatimpressiveanimation.fabric.ChatImpressiveAnimationClientFabric"
-		],
-		"modmenu": [
-			"com.wulian.chatimpressiveanimation.fabric.ModMenuCompat"
+			"com.wulian.chatimpressiveanimation.fabric.ChatImpressiveAnimationClientFabric"
 		]
 	},
 	"mixins": [
@@ -29,8 +26,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.15.0",
-		"minecraft": ">=1.20",
-		"architectury": "*",
+		"minecraft": "<1.20.4",
 		"cloth-config": "*"
 	}
 }
