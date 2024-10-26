@@ -1,6 +1,7 @@
 {
   "pack": {
     "description": "Chat Impressive Animation",
-    "pack_format": 32
+    "pack_format": 32,
+		"supported_formats": [24, 32]
   }
 }

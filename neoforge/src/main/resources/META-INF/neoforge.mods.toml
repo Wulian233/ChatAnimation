@@ -30,15 +30,8 @@ side = "BOTH"
 [[dependencies.chatimpressiveanimation]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.20.5,1.21)"
+versionRange = "[1.20.5,)"
 ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.chatimpressiveanimation]]
-modId = "architectury"
-type = "required"
-versionRange = "*"
-ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.chatimpressiveanimation]]
