@@ -11,15 +11,3 @@ dependencies {
 
 	compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
 }
-
-publishing {
-    publications {
-        mavenCommon(MavenPublication) {
-            artifactId = rootProject.archives_base_name
-            from components.java
-        }
-    }
-
-    repositories {
-    }
-}
